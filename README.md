@@ -1,0 +1,2 @@
+# chefnow-emails
+Email templates
