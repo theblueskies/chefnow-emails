@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Order confirmation</title>
+  </head>
+
+  <style type="text/css">
+    body,
+    table,
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    td,
+    img {
+      padding: 0;
+      border: none;
+      border-spacing: 0px;
+      border-collapse: collapse;
+    }
+
+    p {
+      margin: 10px auto;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 30px;
+      line-height: 1.6;
+      font-family: "Roboto", sans-serif;
+      color: #545454;
+      font-size: 36px;
+      font-weight: 500;
+    }
+
+    h3 {
+      line-height: 2;
+      font-family: "Roboto", sans-serif;
+      font-size: 26px;
+      font-weight: 300;
+      display: block;
+      padding: 10px 0;
+    }
+
+    h4 {
+      line-height: 1.6;
+      font-family: "Roboto", sans-serif;
+      color: #fafafa;
+      font-weight: 100;
+      font-size: 20px;
+    }
+
+    .item {
+      font-size: 20px;
+      padding: 5px 0;
+    }
+
+    a {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+    }
+
+    @media only screen and (max-width: 480px) {
+      tbody {
+        background-color: #fafafa !important;
+      }
+
+      #bodyTable {
+        width: 320px !important;
+      }
+
+      h1 {
+        font-size: 22px !important;
+        padding-bottom: 5px !important;
+      }
+
+      h3 {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        width: 80% !important;
+      }
+
+      h4 {
+        font-size: 14.5px !important;
+      }
+
+      .logo {
+        width: 70% !important;
+      }
+
+      .icon {
+        width: 50% !important;
+      }
+
+      .btn {
+        text-decoration: none;
+        padding: 10px 80px !important;
+        background-color: #016fb9;
+        color: white;
+        border-radius: 10px;
+        display: block;
+        margin: 30px auto !important;
+      }
+
+      .text {
+        width: 70% !important;
+        margin: auto;
+        text-align: right;
+        justify-self: right;
+      }
+
+      p {
+        font-size: 14px !important;
+        margin: 5px auto !important;
+      }
+
+      td {
+        font-size: 13px !important;
+      }
+
+      a {
+        font-size: 15px !important;
+      }
+
+      /* This sets elements to 100% width and fixes the height issues  */
+      *[class="100p"] {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      /* Centers content on mobile */
+      *[class="center"] {
+        text-align: center !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      /* 100percent width section with 20px padding */
+      *[class="100pad"] {
+        width: 100% !important;
+        padding: 20px;
+      }
+    }
+
+    #bodyTable {
+      width: 600px;
+    }
+  </style>
+
+  <body
+    style="
+      background-color: #e7e7e7;
+      padding: 0;
+      border: none;
+      border-spacing: 0px;
+      border-collapse: collapse;
+    "
+  >
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      id="bodyTable"
+      align="center"
+      style="
+        background-color: #fafafa;
+        padding: 0;
+        border: none;
+        border-spacing: 0px;
+        border-collapse: collapse;
+        width: 600px;
+      "
+      class="center"
+    >
+      <thead
+        border="0"
+        cellpadding="20"
+        cellspacing="0"
+        width="600"
+        id="emailContainer"
+        class="100p"
+        style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        "
+      >
+        <tr
+          style="
+            background-color: #016fb9;
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+          align="center"
+        >
+          <td
+            style="
+              padding: 20px 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+            align="center"
+            valign="top"
+          >
+            <img
+              style="
+                padding: 20px;
+                border: none;
+                border-spacing: 0px;
+                border-collapse: collapse;
+              "
+              class="logo"
+              src="https://getchefnow-media.s3.amazonaws.com/email-template/logo.png"
+              alt=""
+            />
+          </td>
+        </tr>
+      </thead>
+
+      <tbody
+        width="600"
+        border="0"
+        cellspacing="0"
+        cellpadding="0"
+        align="left"
+        class="100p"
+        style="
+          background-color: #fafafa;
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        "
+      >
+        <tr
+          align="center"
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <td
+            style="
+              padding: 20px 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            <img
+              class="icon"
+              src="https://getchefnow-media.s3.amazonaws.com/email-template/component%E2%80%931.png"
+              alt=""
+              style="
+                padding: 0;
+                border: none;
+                border-spacing: 0px;
+                border-collapse: collapse;
+              "
+            />
+          </td>
+        </tr>
+        <tr
+          align="center"
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <td
+            style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            <h1
+              style="
+                margin: 0;
+                padding: 0;
+                padding-bottom: 30px;
+                line-height: 1.6;
+                font-family: 'Roboto', sans-serif;
+                color: #545454;
+                font-size: 36px;
+                font-weight: 500;
+              "
+            >
+              Order Confirmed!
+            </h1>
+          </td>
+        </tr>
+        <!-- <tr align="center">
+        <td>
+          <h1>
+            {{name}}!
+          </h1>
+        </td>
+      </tr> -->
+        <tr
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <td
+            style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            <h3
+              style="
+                width: 70%;
+                margin: auto;
+                text-align: center;
+                line-height: 2;
+                font-family: 'Roboto', sans-serif;
+                font-size: 26px;
+                font-weight: 300;
+                display: block;
+                padding: 10px 0;
+              "
+            >
+              Order Summary :
+            </h3>
+          </td>
+        </tr>
+      </tbody>
+      <tbody
+        style="
+          width: 70%;
+          margin: auto;
+          padding: 10px 0 50px 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        "
+      >
+        <tr
+          style="
+            width: 70%;
+            margin: auto auto 10px auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            padding: 5px;
+            border-bottom: #c6c6c6 solid 1px;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <td
+            style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            <p
+              style="
+                font-weight: bold;
+                font-size: 18px;
+                text-align: left;
+                margin: 10px auto;
+              "
+            >
+              Item Name
+            </p>
+          </td>
+          <td
+            style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            <p
+              style="
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+                margin: 10px auto;
+              "
+            >
+              Portions
+            </p>
+          </td>
+          <td
+            style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            <p
+              style="
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+                margin: 10px auto;
+              "
+            >
+              Price
+            </p>
+          </td>
+        </tr>
+        <!-- FULL ITEM LIST -->
+
+        <!-- Individual items -->
+
+        <tr
+          class="item"
+          style="
+            width: 70%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            padding: 5px;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            font-size: 20px;
+          "
+        >
+          <td
+            style="
+              text-align: left;
+              font-size: 18px;
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            {{item}}
+          </td>
+          <td
+            style="
+              font-size: 18px;
+              text-align: center;
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            {{quantity}}
+          </td>
+          <td
+            style="
+              font-size: 18px;
+              text-align: center;
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            {{price}}
+          </td>
+        </tr>
+        <!-- End of Individual item group -->
+        <tr
+          class="item"
+          style="
+            width: 70%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            padding: 5px;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            font-size: 20px;
+          "
+        >
+          <td
+            style="
+              font-size: 18px;
+              text-align: left;
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            {{item}}
+          </td>
+          <td
+            style="
+              font-size: 18px;
+              text-align: center;
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            {{quantity}}
+          </td>
+          <td
+            style="
+              font-size: 18px;
+              text-align: center;
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            {{price}}
+          </td>
+        </tr>
+      </tbody>
+      <!-- FULL ITEM  LIST END -->
+
+      <!-- Price division display -->
+
+      <tr
+        style="
+          width: 70%;
+          margin: 15px auto auto auto;
+          display: grid;
+          grid-template-columns: 3fr 1fr;
+          padding: 5px;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        "
+      >
+        <td
+          style="
+            text-align: right;
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <h4
+            style="
+              margin: auto;
+              text-align: right;
+              line-height: 1;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 400;
+              color: #333;
+              padding: 5px 0;
+              font-size: 20px;
+            "
+          >
+            Subtotal :
+          </h4>
+        </td>
+        <td
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <h4
+            style="
+              margin: auto;
+              text-align: right;
+              line-height: 1;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 400;
+              color: #333;
+              padding: 5px 0;
+              font-size: 20px;
+            "
+          >
+            {{Sub}}
+          </h4>
+        </td>
+      </tr>
+
+      <tr
+        style="
+          width: 70%;
+          margin: auto;
+          display: grid;
+          grid-template-columns: 3fr 1fr;
+          padding: 5px;
+          border-bottom: #016fb9 2px solid;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        "
+      >
+        <td
+          style="
+            text-align: right;
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <h4
+            style="
+              margin: auto;
+              text-align: right;
+              line-height: 1;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 400;
+              color: #333;
+              padding: 5px 0;
+              font-size: 20px;
+            "
+          >
+            HST :
+          </h4>
+        </td>
+        <td
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <h4
+            style="
+              margin: auto;
+              text-align: right;
+              line-height: 1;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 400;
+              color: #333;
+              padding: 5px 0;
+              font-size: 20px;
+            "
+          >
+            {{hst}}
+          </h4>
+        </td>
+      </tr>
+
+      <tr
+        style="
+          width: 70%;
+          margin: auto;
+          display: grid;
+          grid-template-columns: 3fr 1fr;
+          padding: 5px;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        "
+      >
+        <td
+          style="
+            text-align: right;
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <h4
+            style="
+              margin: auto;
+              text-align: right;
+              line-height: 1;
+              font-family: 'Roboto', sans-serif;
+              font-weight: bold;
+              color: #333;
+              padding: 5px 0;
+              font-size: 20px;
+            "
+          >
+            Total Amount :
+          </h4>
+        </td>
+        <td
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <h4
+            style="
+              margin: auto;
+              text-align: right;
+              line-height: 1;
+              font-family: 'Roboto', sans-serif;
+              font-weight: bold;
+              color: #333;
+              padding: 5px 0;
+              font-size: 20px;
+            "
+          >
+            {{total}}
+          </h4>
+        </td>
+      </tr>
+
+      <tr
+        style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        "
+      >
+        <td
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <h4
+            style="
+              width: 70%;
+              margin: auto;
+              text-align: left;
+              line-height: 1.5;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 400;
+              color: #333;
+              padding: 30px 0 0 0;
+              font-size: 20px;
+            "
+          >
+            To view the details of your orders or to request any changes please
+            visit the Orders section
+          </h4>
+        </td>
+      </tr>
+
+      <!-- My Orders button -->
+
+      <tr
+        align="center"
+        style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        "
+      >
+        <td
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <a
+            class="btn"
+            style="
+              text-decoration: none;
+              padding: 15px 120px;
+              background-color: #016fb9;
+              color: white;
+              border-radius: 10px;
+              display: inline-block;
+              margin: 30px auto;
+              font-size: 22px;
+              font-family: 'Roboto', sans-serif;
+              font-weight: 300;
+            "
+            href="https://dev-app.getchefnow.com/orders"
+            >My Orders</a
+          >
+        </td>
+      </tr>
+
+      <tfoot
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        width="600"
+        style="
+          background-color: #252525;
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        "
+        class="100p"
+        align="left"
+      >
+        <tr
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <td
+            align="center"
+            style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            <h4
+              style="
+                line-height: 1.6;
+                font-family: 'Roboto', sans-serif;
+                color: #fafafa;
+                font-weight: 100;
+                font-size: 20px;
+              "
+            >
+              Find us on
+            </h4>
+            <a
+              href="https://www.facebook.com/getchefnow/"
+              style="font-family: 'Roboto', sans-serif; font-weight: 300;"
+            >
+              <img
+                src="https://getchefnow-media.s3.amazonaws.com/email-template/icon_facebook.png"
+                alt="facebook"
+                style="
+                  padding: 0;
+                  border: none;
+                  border-spacing: 0px;
+                  border-collapse: collapse;
+                "
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/getchefnow/"
+              style="font-family: 'Roboto', sans-serif; font-weight: 300;"
+            >
+              <img
+                src="https://getchefnow-media.s3.amazonaws.com/email-template/icon_insta.png"
+                alt="instagram"
+                style="
+                  padding: 0;
+                  border: none;
+                  border-spacing: 0px;
+                  border-collapse: collapse;
+                "
+              />
+            </a>
+            <a
+              href="https://www.twitter.com/getchefnow/"
+              style="font-family: 'Roboto', sans-serif; font-weight: 300;"
+            >
+              <img
+                src="https://getchefnow-media.s3.amazonaws.com/email-template/icon_twitter.png"
+                alt="twitter"
+                style="
+                  padding: 0;
+                  border: none;
+                  border-spacing: 0px;
+                  border-collapse: collapse;
+                "
+              />
+            </a>
+          </td>
+        </tr>
+        <tr
+          style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          "
+        >
+          <td
+            align="center"
+            style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+            "
+          >
+            <h4
+              style="
+                line-height: 1.6;
+                font-family: 'Roboto', sans-serif;
+                color: #fafafa;
+                font-weight: 100;
+                font-size: 20px;
+              "
+            >
+              Contact us : support@getchefnow.com
+            </h4>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
