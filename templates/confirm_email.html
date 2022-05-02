@@ -8,309 +8,376 @@
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <title>Confirmation</title>
   </head>
-
-  <style type="text/css">
-    body {
-      background-color: #c4c4c4;
-      padding: 0;
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-      font-family: 'Lato';
-    }
-
-    #bodyTable {
+  <body style="
+    background-color: #c4c4c4;
+    padding: 0;
+    border: none;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-family: 'Lato';
+  ">
+    <table id="bodyTable" class="center" border="0" cellpadding="0" cellspacing="0" align="center" width="600" bgcolor="#fafafa" style="
       max-width: 480px;
-    }
-
-    table {
       padding: 0;
       border: none;
       border-spacing: 0px;
       border-collapse: collapse;
       background-color: #fafafa;
-    }
-
-    thead {
-      padding: 0;
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-    }
-
-    tbody {
-      background-color: #fafafa;
-      padding: 0;
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-      background-color: #fafafa;
-    }
-
-    tfoot {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0;
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-    }
-
-    tr {
-      padding: 0;
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-    }
-
-    td {
-      padding: 0;
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-    }
-
-    h1 {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 30px;
-      line-height: 38px;
-      letter-spacing: -0.01em;
-      color: #002C4A;
-      padding: 0 2rem;
-    }
-
-    h3 {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      color: #4D6C80;
-      padding: 0 2rem;
-    }
-
-    h4 {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      padding: 0.5rem 2rem;
-      margin: 0;
-      color: #668192;
-    }
-
-    img {
-      padding: 0;
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-    }
-
-    .semibold {
-      font-weight: 600;
-      color: #002C4A;
-    }
-
-    .blue {
-      color: #016FB9;
-    }
-
-    .logo-area {
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-      padding: 2rem;
-    }
-
-    .logo {
-      width: 36px;
-      height: 36px;
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-      margin-right: 10px;
-      vertical-align: middle;
-    }
-
-    .logo_font {
-      display: inline-block;
-      font-size: 22px;
-      line-height: 35px;
-      font-weight: bold;
-      margin: 0;
-      vertical-align: middle;
-    }
-
-    .app-area {
-      border: none;
-      border-spacing: 0px;
-      border-collapse: collapse;
-      padding: 1rem 2rem 2rem;
-    }
-
-    .btn-area {
-      padding: 1rem 2rem;
-    }
-
-    .btn {
-      background: #016FB9;
-      border-radius: 8px;
-      padding: 10px 24px;
-      color: white;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      text-decoration: none;
-    }
-
-    .avatar-area {
-      padding: 1rem 2rem;
-      display: flex;
-      align-content: center;
-    }
-
-    .avatar_des {
-      line-height: 1;
-      margin: 10px 0px;
-    }
-
-    .avatar {
-      width: fit-content;
-      height: fit-content;
-    }
-
-    .app-badge {
-      width: 120px;
-      height: 40px;
-      margin-right: 1rem;
-    }
-
-    .footer_logo {
-      width: 24px;
-      height: 24px;
-      margin-right: 5px;
-      vertical-align: middle;
-    }
-
-    .footer_font {
-      display: inline-block;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 17.1429px;
-      line-height: 23px;
-      margin: 0;
-      vertical-align: middle;
-    }
-
-    .social_icon {
-      margin: 0 0.5rem;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    *[class="w-100"] {
-      width: 100% !important;
-      height: auto !important;
-    }
-
-    *[class="center"] {
-      text-align: center !important;
-      width: 100% !important;
-      height: auto !important;
-    }
-
-    *[class="100pad"] {
-      width: 100% !important;
-      padding: 20px;
-    }
-    @media only screen and (max-width: 520px) {
-      h1 {
-        font-size: 28px;
-      }
-      h3 {
-        font-size: 15px;
-      }
-    }
-  </style>
-
-  <body>
-    <table id="bodyTable" class="center" border="0" cellpadding="0" cellspacing="0" align="center" width="600" bgcolor="#fafafa">
-      <thead id="emailContainer" class="w-100" border="0" cellpadding="20" cellspacing="0" width="600">
-        <tr>
-          <td class="logo-area" align="left" valign="top">
-            <img class="logo" src="./images/logo.png" alt="logo"/>
-            <p class="logo_font blue">Getchefnow</p>
+    ">
+      <thead id="emailContainer" class="w-100" border="0" cellpadding="20" cellspacing="0" width="600" style="
+        padding: 0;
+        border: none;
+        border-spacing: 0px;
+        border-collapse: collapse;
+      ">
+        <tr style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        ">
+          <td class="logo-area" align="left" valign="top" style="
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            padding: 2rem;
+          ">
+            <img style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+              color: #016FB9;
+              width: 36px;
+              height: 36px;
+              margin-right: 5px;
+              vertical-align: middle;
+            " class="logo" src="./images/logo.png" alt="logo"/>
+            <p style="
+              display: inline-block;
+              font-size: 22px;
+              line-height: 35px;
+              font-weight: bold;
+              margin: 0;
+              vertical-align: middle;
+            " class="logo_font blue">Getchefnow</p>
           </td>
         </tr>
       </thead>
 
-      <tbody class="w-100" width="600" border="0" cellspacing="0" cellpadding="0" align="left" bgcolor="#fafafa" >
-        <tr>
-          <td>
-            <h1>You’ve been assigned a chef!</span></h1>
+      <tbody class="w-100" width="600" border="0" cellspacing="0" cellpadding="0" align="left" bgcolor="#fafafa" style="
+        background-color: #fafafa;
+        padding: 0;
+        border: none;
+        border-spacing: 0px;
+        border-collapse: collapse;
+        background-color: #fafafa;
+      ">
+        <tr style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        ">
+          <td style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          ">
+            <h1 style="
+              font-style: normal;
+              font-weight: 700;
+              font-size: 30px;
+              line-height: 38px;
+              letter-spacing: -0.01em;
+              color: #002C4A;
+              padding: 0 2rem;
+            ">You’ve been assigned a chef!</h1>
           </td>
         </tr>
-        <tr>
-          <td>
-            <h3>
-              This is a confirmation email that your order for <span class="semibold">{{date}}</span> has been assigned a chef! You’ve been charged ${{order_min_amount}} for ingredients.
+        <tr style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        ">
+          <td style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          ">
+            <h3 style="
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #4D6C80;
+              padding: 0 2rem;
+            ">
+              This is a confirmation email that your order for <span class="semibold" style="font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #4D6C80;
+                font-weight: 600;
+                color: #002C4A;">{{date}}</span>
+                 has been assigned a chef! You’ve been charged <span class="semibold" style="font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #4D6C80;
+                font-weight: 600;
+                color: #002C4A;">${{order_min_amount}}</span>
+                 for ingredients.
             </h3>
           </td>
         </tr>
-        <tr>
-          <td class="avatar-area">
-            <img class="avatar" src="./images/avatar-2.png" alt="avatar" />
+        <tr style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        ">
+          <td class="avatar-area" style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            padding: 1rem 2rem;
+            display: flex;
+            align-content: center;
+          ">
+            <img style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+              width: 85px;
+              height: 85px;
+              object-fit: cover;
+              border-radius: 50%;
+            " class="avatar" src="./images/avatar-2.png" alt="avatar" />
             <div>
-              <h3 class="semibold avatar_des">{{name}}</h3>
-              <h3 class="avatar_des">Toronto</h3>
-              <h3 class="avatar_des">(123) 456-7890</h3>
+              <h3 style="
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #4D6C80;
+                padding: 0 2rem;
+                font-weight: 600;
+                color: #002C4A;
+                line-height: 1;
+                margin: 10px 0px;
+              " class="semibold avatar_des">{{name}}</h3>
+              <h3 style="
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #4D6C80;
+                padding: 0 2rem;
+                line-height: 1;
+                margin: 10px 0px;
+              " class="avatar_des">Toronto</h3>
+              <h3 style="
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #4D6C80;
+                padding: 0 2rem;
+                line-height: 1;
+                margin: 10px 0px;
+              " class="avatar_des">(123) 456-7890</h3>
             </div>
           </td>
         </tr>
-        <tr>
-          <td>
-            <h3 class="semibold">Download the app</h3>
-            <h3 class="avatar_des">Get the most of Getchefnow by installing our mobile app.</h3>
+        <tr style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        ">
+          <td style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          ">
+            <h3 style="
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #4D6C80;
+              padding: 0 2rem;
+              font-weight: 600;
+              color: #002C4A;
+            " class="semibold">Download the app</h3>
+            <h3 style="
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #4D6C80;
+              padding: 0 2rem;
+              line-height: 1;
+              margin: 10px 0px;
+            " class="avatar_des">Get the most of Getchefnow by installing our mobile app.</h3>
           </td>
         </tr>
-        <tr>
-          <td class="app-area">
-            <a href="https://apps.apple.com/us/app/getchefnow/id1547558170">
-              <img class="app-badge" src="./images/appstore-badge.png" alt="avatar" />
+        <tr style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        ">
+          <td class="app-area" style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            padding: 1rem 2rem 2rem;  
+          ">
+            <a style="text-decoration: none;" href="https://apps.apple.com/us/app/getchefnow/id1547558170">
+              <img style="
+                padding: 0;
+                border: none;
+                border-spacing: 0px;
+                border-collapse: collapse;
+                width: 120px;
+                height: 40px;
+                margin-right: 1rem;
+              " class="app-badge" src="./images/appstore-badge.png" alt="avatar" />
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.getchefnow.chefnow_app&hl=en_CA&gl=US">
-              <img class="app-badge" src="./images/playstore-badge.png" alt="avatar" />
+            <a style="text-decoration: none;" href="https://play.google.com/store/apps/details?id=com.getchefnow.chefnow_app&hl=en_CA&gl=US">
+              <img style="
+                padding: 0;
+                border: none;
+                border-spacing: 0px;
+                border-collapse: collapse;
+                width: 120px;
+                height: 40px;
+                margin-right: 1rem;
+              " class="app-badge" src="./images/playstore-badge.png" alt="avatar" />
             </a>
           </td>
         </tr>
-        <tr>
-          <td>
-            <h4>This email was sent to <span class="blue">druhin@gmail.com</span>. If you'd rather not receive this kind of email, you can <span class="blue">unsubscribe</span> or <span class="blue">manage your email preferences.</span></h4>
-            <h4>© 2022 ChefNow Inc.</h4>
+        <tr style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        ">
+          <td style="
+            padding: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+          ">
+            <h4 style="
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 20px;
+              padding: 0.5rem 2rem;
+              margin: 0;
+              color: #668192;
+            ">This email was sent to <span style="color: #016FB9;" class="blue">druhin@gmail.com</span>. If you'd rather not receive this kind of email, you can <span style="color: #016FB9;" class="blue">unsubscribe</span> or <span style="color: #016FB9;" class="blue">manage your email preferences.</span></h4>
+            <h4 style="
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 20px;
+              padding: 0.5rem 2rem;
+              margin: 0;
+              color: #668192;
+            ">© 2022 ChefNow Inc.</h4>
           </td>
         </tr>
       </tbody>
-      <tfoot class="w-100" border="0" cellpadding="0" cellspacing="0" width="600" align="left">
-        <tr>
-          <td class="logo-area" align="left" valign="top">
-            <img class="footer_logo" src="./images/logo.png" alt="logo"/>
-            <p class="footer_font blue">Getchefnow</p>
+      <tfoot class="w-100" border="0" cellpadding="0" cellspacing="0" width="600" align="left" style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        border: none;
+        border-spacing: 0px;
+        border-collapse: collapse;
+      ">
+        <tr style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        ">
+          <td class="logo-area" align="left" valign="top" style="
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            padding: 2rem;
+          ">
+            <img style="
+              padding: 0;
+              border: none;
+              border-spacing: 0px;
+              border-collapse: collapse;
+              width: 24px;
+              height: 24px;
+              margin-right: 5px;
+              vertical-align: middle;
+              display: inline-block;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 17.1429px;
+              line-height: 23px;
+              margin: 0 5px 0 0;
+              vertical-align: middle;
+            " class="footer_logo" src="./images/logo.png" alt="logo"/>
+            <p style="color: #016FB9; display: inline-block;" class="footer_font blue">Getchefnow</p>
           </td>
         </tr>
-        <tr>
-          <td class="logo-area" align="center">
-            <a href="https://www.facebook.com/getchefnow/">
-              <img class="social_icon" src="./images/vector-1.png" alt="facebook"/>
+        <tr style="
+          padding: 0;
+          border: none;
+          border-spacing: 0px;
+          border-collapse: collapse;
+        ">
+          <td class="logo-area" align="center" style="
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            padding: 2rem;
+          ">
+            <a style="text-decoration: none;" href="https://www.facebook.com/getchefnow/">
+              <img style="
+                padding: 0;
+                border: none;
+                border-spacing: 0px;
+                border-collapse: collapse;
+                margin: 0 0.5rem;
+              " class="social_icon" src="./images/vector-1.png" alt="facebook"/>
             </a>
-            <a href="https://www.instagram.com/getchefnow/">
-              <img class="social_icon" src="./images/vector-2.png" alt="instagram"/>
+            <a style="text-decoration: none;" href="https://www.instagram.com/getchefnow/">
+              <img style="
+                padding: 0;
+                border: none;
+                border-spacing: 0px;
+                border-collapse: collapse;
+                margin: 0 0.5rem;
+              " class="social_icon" src="./images/vector-2.png" alt="instagram"/>
             </a>
-            <a href="https://www.twitter.com/getchefnow/">
-              <img class="social_icon" src="./images/vector-3.png" alt="twitter"/>
+            <a style="text-decoration: none;" href="https://www.twitter.com/getchefnow/">
+              <img style="
+                padding: 0;
+                border: none;
+                border-spacing: 0px;
+                border-collapse: collapse;
+                margin: 0 0.5rem;
+              " class="social_icon" src="./images/vector-3.png" alt="twitter"/>
             </a>
           </td>
         </tr>
